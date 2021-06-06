@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="fastjrun-schema.xsd">
+    <packets>
+        <packet class="openapi.dto.UserDto" remark="登录用户">
+            <field name="open_id" dataType="String" length="12" canBeNull="false"
+                   remark="开放平台用户ID，针对各个接入方都不一样"/>
+            <field name="name" dataType="String" length="12" canBeNull="false"
+                   remark="用户名称"/>
+            <field name="gender" dataType="String" length="12" canBeNull="false"
+                   remark="性别：男、女、未知"/>
+            <field name="avatar" dataType="String" length="12" canBeNull="false"
+                   remark="头像地址"/>
+            <field name="role" dataType="String" length="12" canBeNull="false"
+                   remark="角色:admin、teacher、student"/>
+            <field name="grade_id" dataType="String" length="12" canBeNull="false"
+                   remark="班级ID，针对各个接入方都不一样"/>
+            <field name="grade_name" dataType="String" length="12" canBeNull="false"
+                   remark="班级名称"/>
+            <field name="school_id" dataType="String" length="12" canBeNull="false"
+                   remark="学校ID"/>
+            <field name="school_name" dataType="String" length="12" canBeNull="false"
+                   remark="学校名称"/>
+        </packet>
+        <packet class="openapi.dto.GradeDto" remark="班级">
+            <field name="grade_id" dataType="String" length="12" canBeNull="false"
+                   remark="班级ID，针对各个接入方都不一样"/>
+            <field name="grade_name" dataType="String" length="12" canBeNull="false"
+                   remark="班级名称"/>
+        </packet>
+        <packet class="openapi.dto.SchoolDto" remark="学校">
+            <field name="school_id" dataType="String" length="12" canBeNull="false"
+                   remark="学校ID"/>
+            <field name="school_name" dataType="String" length="12" canBeNull="false"
+                   remark="学校名称"/>
+        </packet>
+        <packet class="openapi.dto.StudentDto" remark="学生">
+            <field name="open_id" dataType="String" length="12" canBeNull="false"
+                   remark="开放平台用户ID，针对各个接入方都不一样"/>
+            <field name="name" dataType="String" length="12" canBeNull="false"
+                   remark="用户名称"/>
+            <field name="gender" dataType="String" length="12" canBeNull="false"
+                   remark="性别：男、女、未知"/>
+            <field name="avatar" dataType="String" length="12" canBeNull="false"
+                   remark="头像地址"/>
+        </packet>
+    </packets>
+    <services>
+        <service name="opnApiControllerService" class="controller.OpenApiControllerService">
+            <method name="user" version="" path="/user" remark="获取当前登录用户信息" method="GET">
+                <response class="openapi.dto.UserDto"/>
+            </method>
+            <method name="myGrades" version="" path="/teacher/grades" remark="获取当前登录用户信息(老师)可管理班级列表" method="GET">
+                <response class="openapi.dto.GradeDto:List"/>
+            </method>
+            <method name="schoolName" version="" path="/school/name/{}" remark="获取指定学校名称" method="GET">
+                <pathVariables>
+                    <pathVariable name="schoolId" dataType="String" length="12" remark="学校ID" />
+                </pathVariables>
+                <response class="openapi.dto.SchoolDto"/>
+            </method>
+            <method name="myStudentsInGrade" version="" path="/teacher/grade/{}/students" remark="获取指定学校名称" method="GET">
+                <pathVariables>
+                    <pathVariable name="gradeId" dataType="String" length="12" remark="班级ID" />
+                </pathVariables>
+                <response class="openapi.dto.StudentDto:List"/>
+            </method>
+        </service>
+    </services>
+    <controllers>
+        <controller type="ApiWorld" name="OpenApiController" version=""
+                    path="/openapi" clientName="OpenApiClient" tags="对外开放接口"
+                    remark="对外开放接口">
+            <service name="opnApiControllerService" ref="opnApiControllerService"/>
+        </controller>
+    </controllers>
+</bundle>
