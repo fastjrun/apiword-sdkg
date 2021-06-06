@@ -11,9 +11,9 @@ import com.helger.jcodemodel.JInvocation;
 
 public class ApiWorldResponseProcessor extends BaseResponseProcessor {
 
-  static String DEFAULT_RESPONSE_CLASS_NAME = "com.fastjrun.apiworld.dto.ResultModel";
+  static String DEFAULT_RESPONSE_CLASS_NAME = "com.fastjrun.apiworld.dto.ResultDataModel";
 
-  static String DEFAULT_LISTRESPONSE_CLASS_NAME = "com.fastjrun.apiworld.dto.ResultListModel";
+  static String DEFAULT_LISTRESPONSE_CLASS_NAME = "com.fastjrun.apiworld.dto.ResultListDataModel";
 
   static String DEFAULT_RESPONSE_HELPER_CLASS_NAME = "com.fastjrun.apiworld.helper.ResultHelper";
 
