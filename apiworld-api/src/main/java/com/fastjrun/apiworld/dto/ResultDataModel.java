@@ -1,10 +1,12 @@
 package com.fastjrun.apiworld.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class ResultDataModel<T> extends BaseResultModel implements Serializable {
 
   private static final long serialVersionUID = 828655026342216609L;
