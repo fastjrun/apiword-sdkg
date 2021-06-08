@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fastjrun-schema.xsd">
+<bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://fastjrun.github.io/apiworld-sdkg/fastjrun-schema.xsd">
     <packets>
         <packet class="packet.customapi.RegistserRestRequestBody">
             <field name="loginId" dataType="String" length="12" canBeNull="false"
