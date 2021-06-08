@@ -15,7 +15,7 @@
         <xs:attribute name="type" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                    <xs:enumeration value="ApiWorld"/>
+                    <xs:enumeration value="CustomApi"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
