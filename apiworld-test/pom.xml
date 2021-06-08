@@ -7,8 +7,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.fastjrun.sdkg.apiworld</groupId>
-        <artifactId>apiworld-sdkg</artifactId>
+        <groupId>com.fastjrun.codeg</groupId>
+        <artifactId>apiworld-sdkg-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>apiworld-test</artifactId>
@@ -22,7 +22,7 @@
             <artifactId>sdkg-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.fastjrun.sdkg.apiworld</groupId>
+            <groupId>com.fastjrun.codeg</groupId>
             <artifactId>apiworld-generator</artifactId>
             <version>${project.version}</version>
         </dependency>
