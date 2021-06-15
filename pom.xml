@@ -12,8 +12,21 @@
     </parent>
     <groupId>com.fastjrun.codeg</groupId>
     <artifactId>apiworld-sdkg-parent</artifactId>
-    <version>1.0</version>
     <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>apiworld-sdkg</name>
+    <description>自定义接口实现示例</description>
+    <url>http://fastjrun.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -97,13 +110,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <modules>
-        <module>apiworld-api</module>
-        <module>apiworld-client</module>
-        <module>apiworld-provider</module>
-        <module>apiworld-generator</module>
-        <module>apiworld-test</module>
-    </modules>
     <build>
         <pluginManagement>
             <plugins>
@@ -116,10 +122,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -133,15 +135,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>${maven-source-plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>attach-sources</id>
-                            <phase>install</phase>
-                            <goals>
-                                <goal>jar-no-fork</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -178,6 +171,16 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
     <profiles>
         <!-- 测试需要带参数 -DskipTests=false -->
@@ -268,6 +271,13 @@
             </properties>
         </profile>
     </profiles>
+    <modules>
+        <module>apiworld-api</module>
+        <module>apiworld-client</module>
+        <module>apiworld-provider</module>
+        <module>apiworld-generator</module>
+        <module>apiworld-test</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -287,4 +297,22 @@
         <sdkg.version>3.0</sdkg.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>fastjrun</name>
+            <email>fastjrun@139.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git@github.com:fastjrun/apiworld-sdkg.git</connection>
+        <developerConnection>scm:git@github.com:fastjrun/apiworld-sdkg.git</developerConnection>
+        <url>https://github.com/fastjrun/sdkg</url>
+    </scm>
 </project>
