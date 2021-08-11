@@ -12,29 +12,22 @@ import com.fastjrun.codeg.processer.BaseResponseProcessor;
 import com.fastjrun.codeg.processer.DefaultExchangeProcessor;
 
 public class ApiWorldHTTPGenerator extends BaseHTTPGenerator {
-    static final String WEB_PACKAGE_NAME = "web.apiworld.controller.";
-
-    public ApiWorldHTTPGenerator() {
-        this.webPackageName = WEB_PACKAGE_NAME;
-    }
-
-    @Override
-    public BaseControllerMethodGenerator prepareBaseControllerMethodGenerator(
-            ServiceMethodGenerator serviceMethodGenerator) {
-        BaseHTTPMethodGenerator baseHTTPMethodGenerator = new ApiWorldHTTPMethodGenerator();
-        baseHTTPMethodGenerator.setClient(this.isClient());
-        baseHTTPMethodGenerator.setPackageNamePrefix(this.packageNamePrefix);
-        baseHTTPMethodGenerator.setMockModel(this.mockModel);
-        baseHTTPMethodGenerator.setServiceMethodGenerator(serviceMethodGenerator);
-        baseHTTPMethodGenerator.setBaseControllerGenerator(this);
-        BaseRequestProcessor baseRequestProcessor = new ApiWorldRequestProcessor();
-        BaseResponseProcessor baseResponseProcessor = new ApiWorldResponseProcessor();
-        DefaultExchangeProcessor<ApiWorldRequestProcessor, ApiWorldResponseProcessor> exchangeProcessor =
-                new DefaultExchangeProcessor
-                        (baseRequestProcessor,
-                                baseResponseProcessor);
-        exchangeProcessor.doParse(serviceMethodGenerator, this.packageNamePrefix);
-        baseHTTPMethodGenerator.setExchangeProcessor(exchangeProcessor);
-        return baseHTTPMethodGenerator;
-    }
+  @Override
+  public BaseControllerMethodGenerator prepareBaseControllerMethodGenerator(
+      ServiceMethodGenerator serviceMethodGenerator) {
+    BaseHTTPMethodGenerator baseHTTPMethodGenerator = new ApiWorldHTTPMethodGenerator();
+    baseHTTPMethodGenerator.setClient(this.isClient());
+    baseHTTPMethodGenerator.setPackageNamePrefix(this.packageNamePrefix);
+    baseHTTPMethodGenerator.setMockModel(this.mockModel);
+    baseHTTPMethodGenerator.setServiceMethodGenerator(serviceMethodGenerator);
+    baseHTTPMethodGenerator.setBaseControllerGenerator(this);
+    BaseRequestProcessor baseRequestProcessor = new ApiWorldRequestProcessor();
+    BaseResponseProcessor baseResponseProcessor = new ApiWorldResponseProcessor();
+    DefaultExchangeProcessor<ApiWorldRequestProcessor, ApiWorldResponseProcessor>
+        exchangeProcessor =
+            new DefaultExchangeProcessor(baseRequestProcessor, baseResponseProcessor);
+    exchangeProcessor.doParse(serviceMethodGenerator, this.packageNamePrefix);
+    baseHTTPMethodGenerator.setExchangeProcessor(exchangeProcessor);
+    return baseHTTPMethodGenerator;
+  }
 }

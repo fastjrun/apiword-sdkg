@@ -4,12 +4,16 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.fastjrun.codeg</groupId>
+        <groupId>com.fastjrun.codeg.apiworld</groupId>
         <artifactId>apiworld-sdkg-parent</artifactId>
-        <version>1.0</version>
+        <version>1.2-SNAPSHOT</version>
     </parent>
     <artifactId>apiworld-api</artifactId>
     <dependencies>
+        <dependency>
+            <groupId>com.fastjrun.codeg.apibase</groupId>
+            <artifactId>sdkg-apibase-api</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
