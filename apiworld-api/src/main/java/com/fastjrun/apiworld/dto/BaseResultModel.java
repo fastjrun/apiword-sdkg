@@ -1,11 +1,14 @@
 package com.fastjrun.apiworld.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fastjrun.utils.JacksonUtils;
 import lombok.Data;
 
 @Data
 public abstract class BaseResultModel {
   private String code;
+
+  @JsonProperty("message")
   private String msg = "";
 
   public BaseResultModel() {}
