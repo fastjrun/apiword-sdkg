@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.fastjrun.codeg.apiworld</groupId>
         <artifactId>apiworld-sdkg-parent</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.2</version>
     </parent>
     <artifactId>apiworld-provider</artifactId>
     <dependencies>
