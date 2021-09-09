@@ -1,4 +1,4 @@
-package com.fastjrun.apiworld.dto;
+package com.fastjrun.apiworld.vo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
@@ -12,21 +12,13 @@ public class ResultModel<T> extends BaseResultModel implements Serializable {
   private static final long serialVersionUID = 828655026342216609L;
   private T data;
 
-  public ResultModel() {
-    super();
+  public ResultModel(Integer code, String message) {
+    this(code,message,null);
   }
 
-  public ResultModel(String code) {
-    super(code);
+  public ResultModel(Integer code, String message, T result) {
+    this.code = code;
+    this.message = message;
+    this.data = result;
   }
-
-  public ResultModel(String code, String msg) {
-    super(code,msg);
-  }
-
-  public ResultModel(String code, String msg, T data) {
-    this(code, msg);
-    this.data = data;
-  }
-
 }

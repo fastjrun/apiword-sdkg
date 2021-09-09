@@ -1,9 +1,9 @@
 package com.fastjrun.apiworld.helper;
 
 import com.fastjrun.apiworld.common.ApiWorldCodeMsgConstants;
-import com.fastjrun.apiworld.dto.ResultPageModel;
-import com.fastjrun.apiworld.dto.ResultListModel;
-import com.fastjrun.apiworld.dto.ResultModel;
+import com.fastjrun.apiworld.vo.ResultPageModel;
+import com.fastjrun.apiworld.vo.ResultListModel;
+import com.fastjrun.apiworld.vo.ResultModel;
 import com.fastjrun.dto.PageResult;
 
 import java.util.List;
@@ -30,7 +30,7 @@ public class ResultHelper {
     return new ResultModel(code.getCode(), code.getMsg(), result);
   }
 
-  public static <T> ResultModel<T> fail(String code, String msg) {
+  public static <T> ResultModel<T> fail(Integer code, String msg) {
     return new ResultModel(code, msg);
   }
 
@@ -55,7 +55,7 @@ public class ResultHelper {
     return new ResultListModel(code.getCode(), code.getMsg(), result);
   }
 
-  public static <T> ResultListModel<T> failList(String code, String msg) {
+  public static <T> ResultListModel<T> failList(Integer code, String msg) {
     return new ResultListModel(code, msg);
   }
 
@@ -80,7 +80,7 @@ public class ResultHelper {
     return new ResultPageModel(code.getCode(), code.getMsg(), result);
   }
 
-  public static <T> ResultPageModel<T> failPage(String code, String msg) {
+  public static <T> ResultPageModel<T> failPage(Integer code, String msg) {
     return new ResultPageModel(code, msg);
   }
 }
