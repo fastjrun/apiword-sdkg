@@ -1,0 +1,19 @@
+CodeGServiceTest.testGenerateBundle:
+  - bundleFiles: apiworld-codeg/apiworld-api.xml
+    moduleName: apiworld-codeg/apiworld-bundle
+    packagePrefix: com.fastjrun.apiworld.
+
+CodeGServiceTest.testGenerateAPI:
+  - bundleFiles: apiworld-codeg/apiworld-api.xml
+    moduleName: apiworld-codeg/apiworld-api
+    packagePrefix: com.fastjrun.apiworld.
+
+CodeGServiceTest.testGenerateClient:
+  - bundleFiles: apiworld-codeg/apiworld-api.xml
+    moduleName: apiworld-codeg/apiworld-client
+    packagePrefix: com.fastjrun.apiworld.
+
+CodeGServiceTest.testGenerateBundleMock:
+  - bundleFiles: apiworld-codeg/apiworld-api.xml
+    moduleName: apiworld-codeg/apiworld-bundle-mock
+    packagePrefix: com.fastjrun.apiworld.
