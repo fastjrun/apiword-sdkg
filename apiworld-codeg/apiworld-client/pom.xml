@@ -11,7 +11,7 @@
     <parent>
         <groupId>com.fastjrun.codeg.apiworld</groupId>
         <artifactId>apiworld-codeg</artifactId>
-        <version>1.4-SNAPSHOT</version>
+        <version>1.4</version>
     </parent>
     <artifactId>apiworld-client</artifactId>
     <dependencies>

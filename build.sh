@@ -29,5 +29,10 @@ elif [ "clean" = $1 ] ; then
   rm -rf apiworld-codeg/apiworld-bundle/src
   rm -rf apiworld-codeg/apiworld-bundle-mock/src
   rm -rf apiworld-codeg/apiworld-client/src
+elif [ "set_version" = $1 ] ; then
+  mvn versions:set -DnewVersion=$2
+  cd apiworld-codeg
+  mvn versions:set -DnewVersion=$2
+  cd ..
 fi
 echo "build done."
