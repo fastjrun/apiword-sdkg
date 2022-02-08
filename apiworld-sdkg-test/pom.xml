@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.fastjrun.codeg.apiworld</groupId>
         <artifactId>apiworld-sdkg</artifactId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.4.1</version>
     </parent>
     <artifactId>apiworld-sdkg-test</artifactId>
     <dependencies>
