@@ -12,7 +12,7 @@
     <groupId>com.fastjrun.codeg.apiworld</groupId>
     <artifactId>apiworld-sdkg</artifactId>
     <packaging>pom</packaging>
-    <version>1.4</version>
+    <version>1.4.1-SNAPSHOT</version>
     <name>apiworld-sdkg</name>
     <description>apiworld接口代码生成插件</description>
     <url>http://fastjrun.com/</url>

@@ -11,7 +11,7 @@
     <parent>
         <groupId>com.fastjrun.codeg.apiworld</groupId>
         <artifactId>apiworld-codeg</artifactId>
-        <version>1.4</version>
+        <version>1.4.1-SNAPSHOT</version>
     </parent>
     <artifactId>apiworld-bundle-mock</artifactId>
     <dependencies>
