@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2019 fastjrun, Inc. All Rights Reserved.
  */
-package com.fastjrun.apiworld.exchange;
+package com.fastjrun.apiworld.client.exchange;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fastjrun.client.exchange.BaseHTTPExchange;

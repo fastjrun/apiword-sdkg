@@ -1,11 +1,11 @@
 /*
  * Copyright (C) 2019 fastjrun, Inc. All Rights Reserved.
  */
-package com.fastjrun.apiworld.exchange;
+package com.fastjrun.apiworld.client.exchange;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fastjrun.apiworld.common.ApiWorldCodeMsgConstants;
-import com.fastjrun.apiworld.common.ClientException;
+import com.fastjrun.apiworld.client.common.ApiWorldCodeMsgConstants;
+import com.fastjrun.apiworld.client.common.ClientException;
 import com.fastjrun.client.exchange.BaseHTTPRequestEncoder;
 
 

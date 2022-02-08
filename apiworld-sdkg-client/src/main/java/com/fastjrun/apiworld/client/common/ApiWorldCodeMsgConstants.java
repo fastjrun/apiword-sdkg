@@ -1,4 +1,6 @@
-package com.fastjrun.apiworld.common;
+package com.fastjrun.apiworld.client.common;
+
+import com.fastjrun.apiworld.common.CodeMsgI;
 
 public interface ApiWorldCodeMsgConstants {
 
@@ -17,7 +19,7 @@ public interface ApiWorldCodeMsgConstants {
     Integer CODE_ClIENT_RESPONSE_MESSAGE_EMPTY = 69992;
     Integer CODE_ClIENT_RESPONSE_MESSAGE_VALID = 69991;
 
-    public enum SWCodeEnum implements CodeMsgI{
+    public enum SWCodeEnum implements CodeMsgI {
         OK(CODE_OK, "OK"),
         // json
         ClIENT_NETWORK_NOT_AVAILABLE(CODE_ClIENT_NETWORK_NOT_AVAILABLE, "网络异常"),

@@ -1,8 +1,11 @@
 /*
  * Copyright (C) 2019 fastjrun, Inc. All Rights Reserved.
  */
-package com.fastjrun.apiworld.common;
+package com.fastjrun.apiworld.client.common;
 
+
+import com.fastjrun.apiworld.common.BaseException;
+import com.fastjrun.apiworld.common.CodeMsgI;
 
 /**
  * @author fastjrun

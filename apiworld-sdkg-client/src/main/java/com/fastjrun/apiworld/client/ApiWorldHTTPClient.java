@@ -3,7 +3,7 @@
  */
 package com.fastjrun.apiworld.client;
 
-import com.fastjrun.apiworld.exchange.DefaultHTTPExchange;
+import com.fastjrun.apiworld.client.exchange.DefaultHTTPExchange;
 import com.fastjrun.client.BaseHTTPClient;
 import com.fastjrun.client.util.DefaultHTTPUtilClient;
 
