@@ -4,8 +4,8 @@
 package com.fastjrun.apiworld.exchange;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fastjrun.client.common.ClientException;
-import com.fastjrun.client.common.CodeMsgConstants;
+import com.fastjrun.apiworld.common.ApiWorldCodeMsgConstants;
+import com.fastjrun.apiworld.common.ClientException;
 import com.fastjrun.client.exchange.BaseHTTPRequestEncoder;
 
 
@@ -17,7 +17,7 @@ public class DefaultHTTPRequestEncoder extends BaseHTTPRequestEncoder {
         try {
             bodyData = this.objectMapper.writeValueAsString(body);
         } catch (JsonProcessingException e) {
-            throw new ClientException(CodeMsgConstants.CodeMsg.ClIENT_REQUEST_COMPOSE_FAIL);
+            throw new ClientException(ApiWorldCodeMsgConstants.SWCodeEnum.ClIENT_REQUEST_COMPOSE_FAIL);
         }
         return bodyData;
     }

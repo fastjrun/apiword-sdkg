@@ -7,6 +7,7 @@ public interface ApiWorldCodeMsgConstants {
     Integer CODE_ClIENT_NETWORK_NOT_AVAILABLE = 69999;
     Integer CODE_ClIENT_RESPONSE_EMPTY = 69998;
     Integer CODE_ClIENT_RESPONSE_NOT_VALID = 69997;
+    Integer CODE_ClIENT_REQUEST_COMPOSE_FAIL = 69990;
 
     // response
     Integer CODE_CLIENT_RESPONSE_CODE_NULL = 69996;
@@ -21,6 +22,7 @@ public interface ApiWorldCodeMsgConstants {
         // json
         ClIENT_NETWORK_NOT_AVAILABLE(CODE_ClIENT_NETWORK_NOT_AVAILABLE, "网络异常"),
         ClIENT_RESPONSE_EMPTY(CODE_ClIENT_RESPONSE_EMPTY, "返回数据为空"),
+        ClIENT_REQUEST_COMPOSE_FAIL(CODE_ClIENT_REQUEST_COMPOSE_FAIL, "组装报文失败"),
         ClIENT_RESPONSE_NOT_VALID(CODE_ClIENT_RESPONSE_NOT_VALID, "返回数据不是json格式"),
 
 
