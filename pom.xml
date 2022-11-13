@@ -7,12 +7,12 @@
     <parent>
         <groupId>com.fastjrun.codeg</groupId>
         <artifactId>base-sdkg</artifactId>
-        <version>4.1</version>
+        <version>4.2.1</version>
     </parent>
     <groupId>com.fastjrun.codeg.apiworld</groupId>
     <artifactId>apiworld-sdkg</artifactId>
     <packaging>pom</packaging>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <name>apiworld-sdkg</name>
     <description>apiworld接口代码生成插件</description>
     <url>http://fastjrun.com/</url>
@@ -77,7 +77,7 @@
         <module>apiworld-codeg</module>
     </modules>
     <properties>
-        <sdkg.version>4.1</sdkg.version>
+        <sdkg.version>4.2.1</sdkg.version>
         <lombok.version>1.18.22</lombok.version>
     </properties>
 </project>

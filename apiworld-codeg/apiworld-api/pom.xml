@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.fastjrun.codeg.apiworld</groupId>
-        <version>1.4.1</version>
+        <version>1.4.2</version>
         <artifactId>apiworld-codeg</artifactId>
     </parent>
     <artifactId>apiworld-api</artifactId>
@@ -18,6 +18,11 @@
         <dependency>
             <groupId>com.fastjrun.codeg.apiworld</groupId>
             <artifactId>apiworld-sdkg-api</artifactId>
+        </dependency>
+        <!-- swagger -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
         </dependency>
     </dependencies>
     <build>
