@@ -45,7 +45,7 @@
                         <configuration>
                             <sqlFile>${sqlFile}</sqlFile>
                             <packagePrefix>${packagePrefix}.</packagePrefix>
-                            <module>base-sdkg/example-sdkg/example-codeg/example-mp-base</module>
+                            <module>apiworld-codeg/apiworld-mp-base</module>
                             <company>${company}</company>
                         </configuration>
                     </execution>

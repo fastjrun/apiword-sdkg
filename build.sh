@@ -2,7 +2,7 @@
 
 echo "build ..."
 if [ "local_apiworld_sdkg" = $1 ] ; then
-  mvn clean install -pl apiworld-sdkg-provider,apiworld-sdkg-generator -am
+  mvn clean install -pl apiworld-sdkg-provider,apiworld-sdkg-generator -am org.apache.maven.plugins:maven-deploy-plugin:2.8:deploy -DskipTests=true
 elif [ "publish_apiworld_sdkg" = $1 ] ; then
   mvn clean deploy -Prelease -pl apiworld-sdkg-provider,apiworld-sdkg-generator -am
 elif [ "package_apiworld" = $1 ] ; then

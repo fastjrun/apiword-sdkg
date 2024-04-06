@@ -4,6 +4,7 @@
 **/*.iml
 pom.xml.versionsBackup
 */pom.xml.versionsBackup
+*-codeg/*-mp-base/src
 *-codeg/*-api/src
 *-codeg/*-bundle/src
 *-codeg/*-bundle-mock/src
