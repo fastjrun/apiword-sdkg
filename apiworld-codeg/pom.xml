@@ -14,7 +14,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.fastjrun.codeg.apiworld</groupId>
-    <version>1.4.2</version>
+    <version>1.0-SNAPSHOT</version>
     <artifactId>apiworld-codeg</artifactId>
     <packaging>pom</packaging>
     <dependencyManagement>
@@ -71,6 +71,16 @@
                     <version>${sdkg.version}</version>
                     <dependencies>
                         <dependency>
+                            <groupId>com.fastjrun.codeg</groupId>
+                            <artifactId>sdkg-helper</artifactId>
+                            <version>${sdkg.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.fastjrun.codeg</groupId>
+                            <artifactId>sdkg-generator</artifactId>
+                            <version>${sdkg.version}</version>
+                        </dependency>
+                        <dependency>
                             <groupId>com.fastjrun.codeg.apiworld</groupId>
                             <artifactId>apiworld-sdkg-generator</artifactId>
                             <version>${apiworld-sdkg.version}</version>
@@ -81,18 +91,19 @@
         </pluginManagement>
     </build>
     <modules>
+        <module>apiworld-mp-base</module>
         <module>apiworld-api</module>
         <module>apiworld-bundle</module>
         <module>apiworld-bundle-mock</module>
         <module>apiworld-mock-server</module>
-        <module>apiworld-client</module>
     </modules>
     <properties>
+        <sqlFile>apiworld-codeg/fast-demo.sql</sqlFile>
         <bundleFiles>apiworld-codeg/apiworld-api.xml</bundleFiles>
         <packagePrefix>com.fastjrun.apiworld</packagePrefix>
         <company>快嘉</company>
-        <sdkg.version>4.2</sdkg.version>
-        <apiworld-sdkg.version>1.4.2</apiworld-sdkg.version>
+        <sdkg.version>4.4.0-SNAPSHOT</sdkg.version>
+        <apiworld-sdkg.version>4.4.0-SNAPSHOT</apiworld-sdkg.version>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
         <swagger2.version>3.0.0</swagger2.version>
         <knife4j.version>2.0.9</knife4j.version>

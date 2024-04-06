@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.fastjrun.codeg.apiworld</groupId>
-        <version>1.4.2</version>
+        <version>1.0-SNAPSHOT</version>
         <artifactId>apiworld-codeg</artifactId>
     </parent>
     <artifactId>apiworld-api</artifactId>

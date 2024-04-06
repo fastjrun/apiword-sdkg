@@ -16,7 +16,6 @@ public class ApiWorldHTTPGenerator extends BaseHTTPGenerator {
   public BaseControllerMethodGenerator prepareBaseControllerMethodGenerator(
       BaseServiceMethodGenerator serviceMethodGenerator) {
     BaseHTTPMethodGenerator baseHTTPMethodGenerator = new ApiWorldHTTPMethodGenerator();
-    baseHTTPMethodGenerator.setClient(this.isClient());
     baseHTTPMethodGenerator.setPackageNamePrefix(this.packageNamePrefix);
     baseHTTPMethodGenerator.setMockModel(this.mockModel);
     baseHTTPMethodGenerator.setServiceMethodGenerator(serviceMethodGenerator);

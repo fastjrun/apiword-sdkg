@@ -1,3 +1,9 @@
+### v4.4.0-SNAPSHOT
+
+- 升级sdkg-4.4.0-SNAPSHOT
+- 删除client
+- 新增apiword-mp-base
+
 ### v1.4.2
 
 - 升级sdkg-4.2.1
