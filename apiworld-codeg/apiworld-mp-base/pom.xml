@@ -13,7 +13,7 @@
         <artifactId>apiworld-codeg</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>example-mp-base</artifactId>
+    <artifactId>apiworld-mp-base</artifactId>
     <dependencies>
         <!-- lombok -->
         <dependency>
